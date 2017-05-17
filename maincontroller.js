@@ -1,16 +1,19 @@
 app.controller("MainController", ['$scope', function($scope) {
-  $scope.title = "Hello World";
+  $scope.title = "Timer";
 
-  $scope.count = 3;
+  $scope.count = 150000;
 
-  $scope.increase = function() {
-    $scope.count += 1;
-  };
+  
 
-  $scope.decrease = function() {
-    $scope.count -= 1;
-  };
+  $scope.start = function() {
+    counting = true;
+    console.log(counting);
+  }
 
+  $scope.stop = function() {
+    counting = false;
+    console.log(counting);
+  }
 
 
 }]);

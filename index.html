@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "myApp" ng-controller = "MainController">
 <head>
-  <title>Sandbox</title>
+  <title> {{ title }} </title>
   <link rel="stylesheet" type = "text/css" href = "./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src = "./app.js"></script>
   <script src = "./maincontroller.js"></script>
+  <script src = "./main.js"></script>
 </head>
-<body ng-app = "myApp">
-<div class= "main" ng-controller = "MainController">
+<body >
+<div class= "main" >
   <div class= "container">
-    <h1> {{ title }} </h1>
+    <h1 id="banner"> 2m 30s </h1>
 
-    <div class="box" ng-click = "decrease()">
-      <p> - </p>
+    <div class="box" onClick="stop()">
+      <p> stop </p>
     </div>
 
-    <div class = "currentCount box">
-    <p>  {{ count }} </p>
-    </div>
-
-    <div class="box" ng-click="increase()">
-      <p> + </p>
+    <div class="box" onClick="start()">
+      <p> start </p>
     </div>
 
 
